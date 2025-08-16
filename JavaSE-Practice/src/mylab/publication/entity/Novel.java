@@ -1,4 +1,4 @@
-package mylab.pulbication.entity;
+package mylab.publication.entity;
 
 public class Novel extends Publication {
     private String author;

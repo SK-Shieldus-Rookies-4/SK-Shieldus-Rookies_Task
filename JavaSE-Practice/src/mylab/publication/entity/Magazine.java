@@ -1,4 +1,4 @@
-package mylab.pulbication.entity;
+package mylab.publication.entity;
 
 public class Magazine extends Publication {
     private String publishPeriod;
