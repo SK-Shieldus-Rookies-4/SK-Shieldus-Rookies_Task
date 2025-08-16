@@ -1,6 +1,6 @@
-package mylab.publication.control;
+package mylab.book.control;
 
-import mylab.publication.entity.*;
+import mylab.book.entity.*;
 
 public class ManageBook {
 
@@ -15,18 +15,20 @@ public class ManageBook {
             new Novel("작별하지않는다", "2021-09-09", 332, 15120, "한강", "장편소설")
         };
 
-        System.out.println("=== 출판물 정보 출력 ===");
+        System.out.println("==== 도서 정보 출력 ====");
         for (int i = 0; i < publications.length; i++) {
             System.out.println((i+1) + ". " + publications[i]);
         }
 
-        System.out.println("\n=== 가격 변경 ===");
-        Publication third = publications[2];
-        int originalPrice = third.getPrice();
-        modifyPrice(third);
-        System.out.println(third.getTitle() + " 원래가격: " + originalPrice + " -> 변경가격: " + third.getPrice() + " (차액: " + (originalPrice - third.getPrice()) + ")");
+        System.out.println("\n==== 가격 변경 ====");
+        Publication target = publications[6]; // 작별하지않는다
+        int oldPrice = target.getPrice();
+        modifyPrice(target);
+        int diff = oldPrice - target.getPrice();
+        System.out.println(target.getTitle() + " 변경 전 가격: " + String.format("%,d원", oldPrice));
+        System.out.println(target.getTitle() + " 변경 후 가격: " + String.format("%,d원", target.getPrice()));
+        System.out.println("차액: " + String.format("%,d원\n", diff));
 
-        System.out.println("\n=== 통계 분석 ===");
         StatisticsAnalyzer analyzer = new StatisticsAnalyzer();
         analyzer.printStatistics(publications);
     }
