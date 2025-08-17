@@ -22,16 +22,15 @@ public class Book {
     @Column(nullable = false)
     private String title;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false) // unique = true 삭제
     private String author;
 
     @Column(unique = true, nullable = false)
     private String isbn;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private int price;
 
-    @Column(nullable = false, updatable = false)
-    @CreationTimestamp
+    @Column(nullable = false)
     private LocalDate publishDate = LocalDate.now();
 }
