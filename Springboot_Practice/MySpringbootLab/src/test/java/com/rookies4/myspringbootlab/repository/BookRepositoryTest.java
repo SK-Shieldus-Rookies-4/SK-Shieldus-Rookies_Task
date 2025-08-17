@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @Transactional
-@Rollback(false) // 데이터 변경을 실제 DB에 반영
+@Rollback(false)
 class BookRepositoryTest {
 
     @Autowired
@@ -81,7 +81,7 @@ class BookRepositoryTest {
 
         Book book2 = createBook(
                 "JPA 프로그래밍",
-                "홍길동", // **저자를 '홍길동'으로 변경**
+                "홍길동",
                 "9788956746432",
                 35000,
                 LocalDate.of(2025, 4, 30)
@@ -92,9 +92,8 @@ class BookRepositoryTest {
 
         List<Book> books = bookRepository.findByAuthor("홍길동");
 
-        assertThat(books).hasSize(2); // **사이즈를 2로 변경**
+        assertThat(books).hasSize(2);
         assertThat(books.get(0).getTitle()).isEqualTo("스프링 부트 입문");
-        // 추가: 두 번째 책에 대한 검증을 추가하는 것도 좋습니다.
         assertThat(books.get(1).getTitle()).isEqualTo("JPA 프로그래밍");
     }
 
