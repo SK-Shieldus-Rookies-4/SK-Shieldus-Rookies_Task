@@ -1,10 +1,15 @@
 package mylab.notification.di.annot;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component; 
+
+@Component
 public class NotificationManager {
 	
     private NotificationService emailService;
     private NotificationService smsService;
     
+    @Autowired
     public NotificationManager(NotificationService emailService, NotificationService smsService) {
         this.emailService = emailService;
         this.smsService = smsService;
