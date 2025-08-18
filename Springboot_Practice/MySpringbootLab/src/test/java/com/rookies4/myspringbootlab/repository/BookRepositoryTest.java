@@ -103,12 +103,10 @@ class BookRepositoryTest {
         bookRepository.save(book1);
         bookRepository.save(book2);
 
-        // ✅ 홍길동으로 검색하면 1권만 나와야 함
         List<Book> booksByHong = bookRepository.findByAuthor("홍길동");
         assertThat(booksByHong).hasSize(1);
         assertThat(booksByHong.get(0).getTitle()).isEqualTo("스프링 부트 입문");
 
-        // ✅ 박둘리로 검색하면 1권만 나와야 함
         List<Book> booksByPark = bookRepository.findByAuthor("박둘리");
         assertThat(booksByPark).hasSize(1);
         assertThat(booksByPark.get(0).getTitle()).isEqualTo("JPA 프로그래밍");
