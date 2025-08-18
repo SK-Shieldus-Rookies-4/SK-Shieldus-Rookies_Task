@@ -36,15 +36,26 @@ class BookRepositoryTest {
     @Test
     @DisplayName("도서 등록 테스트")
     void testCreateBook() {
-        Book book = createBook(
+        Book book1 = createBook(
                 "스프링 부트 입문",
                 "홍길동",
-                "9788956746424",
+                "9788956746425",
                 30000,
-                LocalDate.of(2023, 1, 15)
+                LocalDate.of(2025, 5, 7)
         );
 
-        Book savedBook = bookRepository.save(book);
+        Book book2 = createBook(
+                "JPA 프로그래밍",
+                "박둘리",
+                "9788956746432",
+                35000,
+                LocalDate.of(2025, 4, 30)
+        );
+
+        bookRepository.save(book1);
+        bookRepository.save(book2);
+
+        Book savedBook = bookRepository.save(book1);
 
         assertThat(savedBook.getId()).isNotNull();
         assertThat(savedBook.getTitle()).isEqualTo("스프링 부트 입문");
@@ -76,26 +87,31 @@ class BookRepositoryTest {
         Book book1 = createBook(
                 "스프링 부트 입문",
                 "홍길동",
-                "9788956746424",
+                "9788956746425",
                 30000,
-                LocalDate.of(2023, 1, 15)
+                LocalDate.of(2025, 5, 7)
         );
 
         Book book2 = createBook(
                 "JPA 프로그래밍",
                 "박둘리",
-                "9788956746431",
+                "9788956746432",
                 35000,
-                LocalDate.of(2024, 3, 24)
+                LocalDate.of(2025, 4, 30)
         );
 
         bookRepository.save(book1);
         bookRepository.save(book2);
 
-        List<Book> books = bookRepository.findByAuthor("홍길동");
+        // ✅ 홍길동으로 검색하면 1권만 나와야 함
+        List<Book> booksByHong = bookRepository.findByAuthor("홍길동");
+        assertThat(booksByHong).hasSize(1);
+        assertThat(booksByHong.get(0).getTitle()).isEqualTo("스프링 부트 입문");
 
-        assertThat(books).hasSize(2);
-        assertThat(books).extracting("title").contains("스프링 부트 입문");
+        // ✅ 박둘리로 검색하면 1권만 나와야 함
+        List<Book> booksByPark = bookRepository.findByAuthor("박둘리");
+        assertThat(booksByPark).hasSize(1);
+        assertThat(booksByPark.get(0).getTitle()).isEqualTo("JPA 프로그래밍");
     }
 
     @Test
