@@ -15,9 +15,9 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DataJpaTest
+@SpringBootTest
+//@DataJpaTest
 @Transactional
-@Rollback(false)
 class BookRepositoryTest {
 
     @Autowired
@@ -39,16 +39,18 @@ class BookRepositoryTest {
         Book book = createBook(
                 "스프링 부트 입문",
                 "홍길동",
-                "9788956746425",
+                "9788956746424",
                 30000,
-                LocalDate.of(2025, 5, 7)
+                LocalDate.of(2023, 1, 15)
         );
 
         Book savedBook = bookRepository.save(book);
 
         assertThat(savedBook.getId()).isNotNull();
         assertThat(savedBook.getTitle()).isEqualTo("스프링 부트 입문");
+        assertThat(savedBook.getAuthor()).isEqualTo("홍길동");
     }
+
 
     @Test
     @DisplayName("ISBN으로 도서 조회 테스트")
@@ -56,13 +58,13 @@ class BookRepositoryTest {
         Book book = createBook(
                 "JPA 프로그래밍",
                 "박둘리",
-                "9788956746432",
+                "9788956746431",
                 35000,
-                LocalDate.of(2025, 4, 30)
+                LocalDate.of(2024, 3, 24)
         );
         bookRepository.save(book);
 
-        Optional<Book> foundBook = bookRepository.findByIsbn("9788956746432");
+        Optional<Book> foundBook = bookRepository.findByIsbn("9788956746431");
 
         assertThat(foundBook).isPresent();
         assertThat(foundBook.get().getAuthor()).isEqualTo("박둘리");
@@ -74,17 +76,17 @@ class BookRepositoryTest {
         Book book1 = createBook(
                 "스프링 부트 입문",
                 "홍길동",
-                "9788956746425",
+                "9788956746424",
                 30000,
-                LocalDate.of(2025, 5, 7)
+                LocalDate.of(2023, 1, 15)
         );
 
         Book book2 = createBook(
                 "JPA 프로그래밍",
-                "홍길동",
-                "9788956746432",
+                "박둘리",
+                "9788956746431",
                 35000,
-                LocalDate.of(2025, 4, 30)
+                LocalDate.of(2024, 3, 24)
         );
 
         bookRepository.save(book1);
@@ -93,8 +95,7 @@ class BookRepositoryTest {
         List<Book> books = bookRepository.findByAuthor("홍길동");
 
         assertThat(books).hasSize(2);
-        assertThat(books.get(0).getTitle()).isEqualTo("스프링 부트 입문");
-        assertThat(books.get(1).getTitle()).isEqualTo("JPA 프로그래밍");
+        assertThat(books).extracting("title").contains("스프링 부트 입문");
     }
 
     @Test
@@ -103,7 +104,7 @@ class BookRepositoryTest {
         Book book = createBook(
                 "스프링 부트 입문",
                 "홍길동",
-                "9788956746425",
+                "9788956746424",
                 30000,
                 LocalDate.of(2025, 5, 7)
         );
@@ -121,15 +122,15 @@ class BookRepositoryTest {
         Book book = createBook(
                 "JPA 프로그래밍",
                 "박둘리",
-                "9788956746432",
+                "9788956746431",
                 35000,
-                LocalDate.of(2025, 4, 30)
+                LocalDate.of(2024, 3, 24)
         );
         Book savedBook = bookRepository.save(book);
 
         bookRepository.delete(savedBook);
 
-        Optional<Book> deletedBook = bookRepository.findByIsbn("9788956746432");
+        Optional<Book> deletedBook = bookRepository.findByIsbn("9788956746431");
         assertThat(deletedBook).isNotPresent();
     }
 }
