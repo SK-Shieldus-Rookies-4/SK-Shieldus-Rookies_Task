@@ -28,7 +28,7 @@ public class BookController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    /** Book 수정 (부분 업데이트) */
+    /** Book 수정 */
     @PatchMapping("/{id}")
     public ResponseEntity<BookDTO.BookResponse> updateBook(
             @PathVariable Long id,
