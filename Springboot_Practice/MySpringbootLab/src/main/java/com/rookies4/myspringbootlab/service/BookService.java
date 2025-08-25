@@ -21,7 +21,6 @@ public class BookService {
     private final BookRepository bookRepository;
     private final BookDetailRepository bookDetailRepository;
 
-
     /** Book 생성 */
     @Transactional
     public BookDTO.Response createBook(BookDTO.Request request) {
@@ -40,9 +39,22 @@ public class BookService {
                 .publishDate(request.getPublishDate())
                 .build();
 
+        // BookDetail 처리
+        if (request.getDetailRequest() != null) {
+            BookDetail detail = BookDetail.builder()
+                    .description(request.getDetailRequest().getDescription())
+                    .language(request.getDetailRequest().getLanguage())
+                    .pageCount(request.getDetailRequest().getPageCount())
+                    .publisher(request.getDetailRequest().getPublisher())
+                    .coverImageUrl(request.getDetailRequest().getCoverImageUrl())
+                    .edition(request.getDetailRequest().getEdition())
+                    .book(book) // Book과 연관
+                    .build();
+            book.setBookDetail(detail);
+        }
+
         Book savedBook = bookRepository.save(book);
 
-        // Entity -> DTO
         return BookDTO.Response.fromEntity(savedBook);
     }
 
@@ -57,6 +69,22 @@ public class BookService {
         if (request.getIsbn() != null) existBook.setIsbn(request.getIsbn());
         if (request.getPrice() != null) existBook.setPrice(request.getPrice());
         if (request.getPublishDate() != null) existBook.setPublishDate(request.getPublishDate());
+
+        // BookDetail 수정/생성
+        if (request.getDetailRequest() != null) {
+            BookDetail detail = existBook.getBookDetail();
+            if (detail == null) {
+                detail = new BookDetail();
+                detail.setBook(existBook);
+                existBook.setBookDetail(detail);
+            }
+            detail.setDescription(request.getDetailRequest().getDescription());
+            detail.setLanguage(request.getDetailRequest().getLanguage());
+            detail.setPageCount(request.getDetailRequest().getPageCount());
+            detail.setPublisher(request.getDetailRequest().getPublisher());
+            detail.setCoverImageUrl(request.getDetailRequest().getCoverImageUrl());
+            detail.setEdition(request.getDetailRequest().getEdition());
+        }
 
         return BookDTO.Response.fromEntity(existBook);
     }
