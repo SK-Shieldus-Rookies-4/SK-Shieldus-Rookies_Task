@@ -15,13 +15,10 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     Optional<Book> findByIsbn(String isbn);
 
     // 저자로 검색
-    List<Book> findByAuthor(String author);
+    List<Book> findByAuthorContainingIgnoreCase(String author);
 
     // 제목으로 검색
-    List<Book> findByAuthorContainingIgnoreCase(String title);
-
-    // ISBN 중복 확인
-    boolean existsByIsbn(String isbn);
+    List<Book> findByTitleContainingIgnoreCase(String title);
 
     // ID로 Book과 BookDetail 함께 로드
     @Query("SELECT b FROM Book b JOIN FETCH b.bookDetail WHERE b.id = :id")
@@ -30,6 +27,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     // ISBN으로 Book과 BookDetail 함께 로드
     @Query("SELECT b FROM Book b JOIN FETCH b.bookDetail WHERE b.isbn = :isbn")
     Optional<Book> findByIsbnWithBookDetail(@Param("isbn") String isbn);
+
+
 
 
 }
