@@ -5366,3 +5366,8 @@ com.rookies4.myspringbootlab.controller.BookController#getBooksByAuthor(String) 
 2025-08-25T22:57:15.871+09:00  INFO 63028 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
 2025-08-25T22:57:15.891+09:00  INFO 63028 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 3.219 seconds (process running for 4.078)
 2025-08-25T22:57:15.895+09:00  INFO 63028 --- [MySpringbootLab] [restartedMain] c.r.m.r.MyPropRunner                     : port = 94
+2025-08-25T22:58:52.890+09:00  INFO 63028 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-25T22:58:52.897+09:00  INFO 63028 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-25T22:58:52.906+09:00  INFO 63028 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-25T22:58:52.911+09:00  INFO 63028 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-25T22:58:52.917+09:00  INFO 63028 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

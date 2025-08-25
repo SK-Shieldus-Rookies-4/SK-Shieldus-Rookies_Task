@@ -26,7 +26,7 @@ public class BookController {
     }
 
     /** Book 수정 */
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<BookDTO.Response> updateBook(
             @PathVariable Long id,
             @RequestBody @Valid BookDTO.Request request) {
@@ -49,7 +49,7 @@ public class BookController {
     }
 
     /** ID로 Book 조회 */
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<BookDTO.Response> getBookById(@PathVariable Long id) {
         BookDTO.Response book = bookService.getBookById(id);
         return ResponseEntity.ok(book);
@@ -63,15 +63,17 @@ public class BookController {
     }
 
     /** 저자로 Book 조회 */
-    @GetMapping("/author/{author}")
-    public ResponseEntity<List<BookDTO.Response>> getBooksByAuthor(@PathVariable String author) {
+    @GetMapping("/search/author")
+    public ResponseEntity<List<BookDTO.Response>> getBooksByAuthor(
+            @RequestParam String author) {
         List<BookDTO.Response> books = bookService.getBooksByAuthor(author);
         return ResponseEntity.ok(books);
     }
 
     /** 제목으로 Book 조회 */
-    @GetMapping("/title/{title}")
-    public ResponseEntity<List<BookDTO.Response>> getBooksByTitle(@PathVariable String title) {
+    @GetMapping("/search/title")
+    public ResponseEntity<List<BookDTO.Response>> getBooksByTitle(
+            @RequestParam String title) {
         List<BookDTO.Response> books = bookService.getBooksByTitle(title);
         return ResponseEntity.ok(books);
     }
