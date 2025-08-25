@@ -1,13 +1,10 @@
 package com.rookies4.myspringbootlab.controller;
 
 import com.rookies4.myspringbootlab.controller.dto.BookDTO;
-import com.rookies4.myspringbootlab.entity.Book;
-import com.rookies4.myspringbootlab.exception.BusinessException;
 import com.rookies4.myspringbootlab.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
@@ -22,19 +19,18 @@ public class BookController {
 
     /** Book 생성 */
     @PostMapping
-    public ResponseEntity<BookDTO.BookResponse> createBook(
-            @RequestBody @Valid BookDTO.BookCreateRequest request) {
-        BookDTO.BookResponse response = bookService.createBook(request);
+    public ResponseEntity<BookDTO.Response> createBook(
+            @RequestBody @Valid BookDTO.Request request) {
+        BookDTO.Response response = bookService.createBook(request);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     /** Book 수정 */
     @PatchMapping("/{id}")
-    public ResponseEntity<BookDTO.BookResponse> updateBook(
+    public ResponseEntity<BookDTO.Response> updateBook(
             @PathVariable Long id,
-            @RequestBody @Valid BookDTO.BookUpdateRequest request) {
-
-        BookDTO.BookResponse response = bookService.updateBook(id, request);
+            @RequestBody @Valid BookDTO.Request request) {
+        BookDTO.Response response = bookService.updateBook(id, request);
         return ResponseEntity.ok(response);
     }
 
@@ -47,29 +43,29 @@ public class BookController {
 
     /** 전체 Book 조회 */
     @GetMapping
-    public ResponseEntity<List<BookDTO.BookResponse>> getAllBooks() {
-        List<BookDTO.BookResponse> books = bookService.getAllBooks();
+    public ResponseEntity<List<BookDTO.Response>> getAllBooks() {
+        List<BookDTO.Response> books = bookService.getAllBooks();
         return ResponseEntity.ok(books);
     }
 
     /** ID로 Book 조회 */
     @GetMapping("/id/{id}")
-    public ResponseEntity<BookDTO.BookResponse> getBookById(@PathVariable Long id) {
-        BookDTO.BookResponse book = bookService.getBookById(id);
+    public ResponseEntity<BookDTO.Response> getBookById(@PathVariable Long id) {
+        BookDTO.Response book = bookService.getBookById(id);
         return ResponseEntity.ok(book);
     }
 
     /** ISBN으로 Book 조회 */
     @GetMapping("/isbn/{isbn}")
-    public ResponseEntity<BookDTO.BookResponse> getBookByIsbn(@PathVariable String isbn) {
-        BookDTO.BookResponse book = bookService.getBookByIsbn(isbn);
+    public ResponseEntity<BookDTO.Response> getBookByIsbn(@PathVariable String isbn) {
+        BookDTO.Response book = bookService.getBookByIsbn(isbn);
         return ResponseEntity.ok(book);
     }
 
     /** 저자로 Book 조회 */
     @GetMapping("/author/{author}")
-    public ResponseEntity<List<BookDTO.BookResponse>> getBooksByAuthor(@PathVariable String author) {
-        List<BookDTO.BookResponse> books = bookService.getBooksByAuthor(author);
+    public ResponseEntity<List<BookDTO.Response>> getBooksByAuthor(@PathVariable String author) {
+        List<BookDTO.Response> books = bookService.getBooksByAuthor(author);
         return ResponseEntity.ok(books);
     }
 }
