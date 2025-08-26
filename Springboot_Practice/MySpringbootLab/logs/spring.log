@@ -5600,3 +5600,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: (conn=88) Duplicat
 2025-08-25T23:12:39.467+09:00  WARN 64127 --- [MySpringbootLab] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' is not supported]
 2025-08-25T23:12:49.702+09:00  WARN 64127 --- [MySpringbootLab] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' is not supported]
 2025-08-25T23:12:57.273+09:00  WARN 64127 --- [MySpringbootLab] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' is not supported]
+2025-08-25T23:16:50.241+09:00  INFO 64127 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-25T23:16:50.248+09:00  INFO 64127 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-25T23:16:50.255+09:00  INFO 64127 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-25T23:16:50.259+09:00  INFO 64127 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-25T23:16:50.268+09:00  INFO 64127 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
