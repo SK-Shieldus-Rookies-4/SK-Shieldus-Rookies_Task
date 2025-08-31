@@ -12,7 +12,12 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+////@CrossOrigin(origins = "*")
+//@CrossOrigin(
+//        origins = "*",
+//        allowedHeaders = "*",
+//        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PATCH, RequestMethod.DELETE, RequestMethod.OPTIONS}
+//)
 @RequestMapping("/api/books")
 public class BookController {
 

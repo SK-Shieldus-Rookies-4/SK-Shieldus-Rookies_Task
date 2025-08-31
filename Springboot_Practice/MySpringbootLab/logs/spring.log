@@ -5748,3 +5748,360 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-08-27T20:23:39.193+09:00  INFO 92848 --- [MySpringbootLab] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-08-27T20:23:39.194+09:00  INFO 92848 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2025-08-27T20:23:39.195+09:00  INFO 92848 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2025-08-27T20:26:18.561+09:00  INFO 92848 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-27T20:26:18.567+09:00  INFO 92848 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-27T20:26:18.574+09:00  INFO 92848 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-27T20:26:18.580+09:00  INFO 92848 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-27T20:26:18.588+09:00  INFO 92848 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-27T20:34:13.802+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 95187 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-27T20:34:13.806+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-27T20:34:13.840+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-27T20:34:13.840+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-27T20:34:14.768+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-27T20:34:14.817+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2025-08-27T20:34:15.230+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-27T20:34:15.253+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-27T20:34:15.255+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-27T20:34:15.287+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-27T20:34:15.288+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1446 ms
+2025-08-27T20:34:15.445+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-27T20:34:15.491+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-27T20:34:15.514+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-27T20:34:15.681+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-27T20:34:15.704+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-27T20:34:15.779+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@65495856
+2025-08-27T20:34:15.781+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-27T20:34:15.806+09:00  WARN 95187 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-27T20:34:15.821+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-27T20:34:16.397+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-27T20:34:16.434+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-27T20:34:16.591+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-27T20:34:16.955+09:00  WARN 95187 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-27T20:34:17.156+09:00  WARN 95187 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-27T20:34:17.303+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-27T20:34:17.328+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-27T20:34:17.348+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-27T20:34:17.433+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-27T20:34:17.470+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 4.092 seconds (process running for 4.953)
+2025-08-27T20:34:17.563+09:00  INFO 95187 --- [MySpringbootLab] [restartedMain] c.r.m.r.MyPropRunner                     : port = 97
+2025-08-27T20:34:21.451+09:00  INFO 95187 --- [MySpringbootLab] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-27T20:34:21.451+09:00  INFO 95187 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-27T20:34:21.452+09:00  INFO 95187 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2025-08-27T20:35:17.564+09:00  INFO 95187 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-27T20:35:17.571+09:00  INFO 95187 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-27T20:35:17.585+09:00  INFO 95187 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-27T20:35:17.591+09:00  INFO 95187 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-27T20:35:17.598+09:00  INFO 95187 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-28T23:42:23.240+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 60189 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-28T23:42:23.244+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-28T23:42:23.294+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-28T23:42:23.294+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-28T23:42:24.183+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-28T23:42:24.223+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2025-08-28T23:42:24.630+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-28T23:42:24.644+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-28T23:42:24.645+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-28T23:42:24.680+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-28T23:42:24.680+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1385 ms
+2025-08-28T23:42:24.846+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-28T23:42:24.906+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-28T23:42:24.933+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-28T23:42:25.225+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-28T23:42:25.248+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-28T23:42:25.318+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5290ae48
+2025-08-28T23:42:25.319+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-28T23:42:25.343+09:00  WARN 60189 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-28T23:42:25.357+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-28T23:42:26.283+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-28T23:42:26.330+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-28T23:42:26.489+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-28T23:42:26.909+09:00  WARN 60189 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-28T23:42:27.390+09:00  WARN 60189 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-28T23:42:27.535+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-28T23:42:27.564+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-28T23:42:27.570+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-28T23:42:27.631+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-28T23:42:27.647+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 4.909 seconds (process running for 6.137)
+2025-08-28T23:42:27.653+09:00  INFO 60189 --- [MySpringbootLab] [restartedMain] c.r.m.r.MyPropRunner                     : port = 97
+2025-08-28T23:42:55.262+09:00  WARN 60189 --- [MySpringbootLab] [HikariPool-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s841ms), soft-evicting connections from pool.
+2025-08-28T23:46:07.489+09:00  INFO 60189 --- [MySpringbootLab] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-28T23:46:07.490+09:00  INFO 60189 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-28T23:46:07.505+09:00  INFO 60189 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 13 ms
+2025-08-28T23:50:28.410+09:00 ERROR 60189 --- [MySpringbootLab] [http-nio-8080-exec-5] c.r.m.e.a.GlobalExceptionHandler         : ValidationException: {author=Author name is required, isbn=ISBN is required, title=Book title is required}
+2025-08-28T23:50:28.423+09:00  WARN 60189 --- [MySpringbootLab] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.rookies4.myspringbootlab.controller.dto.BookDTO$Response> com.rookies4.myspringbootlab.controller.BookController.createBook(com.rookies4.myspringbootlab.controller.dto.BookDTO$Request) with 3 errors: [Field error in object 'request' on field 'title': rejected value [null]; codes [NotBlank.request.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [request.title,title]; arguments []; default message [title]]; default message [Book title is required]] [Field error in object 'request' on field 'isbn': rejected value [null]; codes [NotBlank.request.isbn,NotBlank.isbn,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [request.isbn,isbn]; arguments []; default message [isbn]]; default message [ISBN is required]] [Field error in object 'request' on field 'author': rejected value [null]; codes [NotBlank.request.author,NotBlank.author,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [request.author,author]; arguments []; default message [author]]; default message [Author name is required]] ]
+2025-08-29T00:04:12.663+09:00  INFO 60189 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T00:04:12.669+09:00  INFO 60189 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T00:04:12.676+09:00  INFO 60189 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T00:04:12.680+09:00  INFO 60189 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T00:04:12.687+09:00  INFO 60189 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-29T00:04:17.251+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 68247 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-29T00:04:17.255+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-29T00:04:17.292+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29T00:04:17.292+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29T00:04:17.858+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T00:04:17.890+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2025-08-29T00:04:18.196+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-29T00:04:18.205+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-29T00:04:18.205+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-29T00:04:18.229+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-29T00:04:18.230+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 938 ms
+2025-08-29T00:04:18.348+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-29T00:04:18.374+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-29T00:04:18.389+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-29T00:04:18.534+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-29T00:04:18.551+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-29T00:04:18.605+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@124ea5e4
+2025-08-29T00:04:18.606+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-29T00:04:18.625+09:00  WARN 68247 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-29T00:04:18.635+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-29T00:04:19.117+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-29T00:04:19.159+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T00:04:19.321+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-29T00:04:19.643+09:00  WARN 68247 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-29T00:04:19.796+09:00  WARN 68247 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-29T00:04:19.903+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-29T00:04:19.919+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29T00:04:19.923+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-29T00:04:19.969+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-29T00:04:19.982+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 3.303 seconds (process running for 4.016)
+2025-08-29T00:04:19.987+09:00  INFO 68247 --- [MySpringbootLab] [restartedMain] c.r.m.r.MyPropRunner                     : port = 92
+2025-08-29T00:04:20.750+09:00  INFO 68247 --- [MySpringbootLab] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-29T00:04:20.751+09:00  INFO 68247 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-29T00:04:20.752+09:00  INFO 68247 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2025-08-29T00:05:56.123+09:00  INFO 68247 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T00:05:56.129+09:00  INFO 68247 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T00:05:56.136+09:00  INFO 68247 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T00:05:56.139+09:00  INFO 68247 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T00:05:56.148+09:00  INFO 68247 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-29T09:17:48.825+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 81444 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-29T09:17:48.828+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-29T09:17:48.856+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29T09:17:48.856+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29T09:17:49.580+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T09:17:49.616+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2025-08-29T09:17:50.057+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-29T09:17:50.100+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1244 ms
+2025-08-29T09:17:50.241+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-29T09:17:50.276+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-29T09:17:50.298+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-29T09:17:50.446+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-29T09:17:50.463+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-29T09:17:50.529+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@265567a5
+2025-08-29T09:17:50.530+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-29T09:17:50.552+09:00  WARN 81444 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-29T09:17:50.566+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-29T09:17:51.145+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-29T09:17:51.193+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:17:51.478+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-29T09:17:52.013+09:00  WARN 81444 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-29T09:17:52.440+09:00  WARN 81444 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-29T09:17:52.838+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-29T09:17:52.898+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29T09:17:52.907+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-29T09:17:53.024+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-29T09:17:53.113+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 4.66 seconds (process running for 5.352)
+2025-08-29T09:17:53.117+09:00  INFO 81444 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T09:17:53.144+09:00  INFO 81444 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T09:17:53.164+09:00  INFO 81444 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:17:53.169+09:00  INFO 81444 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T09:17:53.201+09:00  INFO 81444 --- [MySpringbootLab] [restartedMain] c.r.m.r.MyPropRunner                     : port = 44
+2025-08-29T09:17:53.221+09:00  INFO 81444 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-29T09:17:53.825+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 81469 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-29T09:17:53.829+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-29T09:17:53.861+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29T09:17:53.861+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29T09:17:55.042+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T09:17:55.092+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2025-08-29T09:17:55.454+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-29T09:17:55.468+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-29T09:17:55.468+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-29T09:17:55.495+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-29T09:17:55.497+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1632 ms
+2025-08-29T09:17:55.623+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-29T09:17:55.651+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-29T09:17:55.672+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-29T09:17:55.835+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-29T09:17:55.851+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-29T09:17:55.916+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@38cec937
+2025-08-29T09:17:55.917+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-29T09:17:55.936+09:00  WARN 81469 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-29T09:17:55.951+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-29T09:17:56.486+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-29T09:17:56.520+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:17:56.684+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-29T09:17:56.992+09:00  WARN 81469 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-29T09:17:57.138+09:00  WARN 81469 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-29T09:17:57.249+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-29T09:17:57.266+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29T09:17:57.270+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-29T09:17:57.318+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-29T09:17:57.331+09:00  INFO 81469 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 3.826 seconds (process running for 5.508)
+2025-08-29T09:17:57.332+09:00  INFO 81469 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T09:17:57.338+09:00  INFO 81469 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T09:17:57.343+09:00  INFO 81469 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:17:57.345+09:00  INFO 81469 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T09:17:57.352+09:00  INFO 81469 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-29T09:18:01.614+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 81527 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-29T09:18:01.619+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-29T09:18:01.653+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29T09:18:01.654+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29T09:18:02.674+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T09:18:02.736+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2025-08-29T09:18:03.180+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-29T09:18:03.224+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1569 ms
+2025-08-29T09:18:03.379+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-29T09:18:03.418+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-29T09:18:03.438+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-29T09:18:03.586+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-29T09:18:03.605+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-29T09:18:03.687+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2a51f5b8
+2025-08-29T09:18:03.688+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-29T09:18:03.713+09:00  WARN 81527 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-29T09:18:03.731+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-29T09:18:04.350+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-29T09:18:04.384+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:18:04.559+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-29T09:18:04.921+09:00  WARN 81527 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-29T09:18:05.122+09:00  WARN 81527 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-29T09:18:05.314+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-29T09:18:05.349+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29T09:18:05.357+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-29T09:18:05.433+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-29T09:18:05.451+09:00  INFO 81527 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 4.15 seconds (process running for 5.409)
+2025-08-29T09:18:05.453+09:00  INFO 81527 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T09:18:05.461+09:00  INFO 81527 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T09:18:05.469+09:00  INFO 81527 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:18:05.473+09:00  INFO 81527 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T09:18:05.486+09:00  INFO 81527 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-29T09:18:11.098+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 81600 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-29T09:18:11.101+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-29T09:18:11.122+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29T09:18:11.122+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29T09:18:11.631+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T09:18:11.664+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2025-08-29T09:18:11.966+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-29T09:18:11.981+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-29T09:18:11.982+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-29T09:18:12.009+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-29T09:18:12.010+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 887 ms
+2025-08-29T09:18:12.136+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-29T09:18:12.184+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-29T09:18:12.208+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-29T09:18:12.336+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-29T09:18:12.351+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-29T09:18:12.399+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@21f6cfc7
+2025-08-29T09:18:12.400+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-29T09:18:12.421+09:00  WARN 81600 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-29T09:18:12.433+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-29T09:18:12.903+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-29T09:18:12.933+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:18:13.087+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-29T09:18:13.376+09:00  WARN 81600 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-29T09:18:13.515+09:00  WARN 81600 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-29T09:18:13.621+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-29T09:18:13.638+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29T09:18:13.642+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-29T09:18:13.684+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-29T09:18:13.697+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 2.895 seconds (process running for 3.563)
+2025-08-29T09:18:13.723+09:00  INFO 81600 --- [MySpringbootLab] [restartedMain] c.r.m.r.MyPropRunner                     : port = 54
+2025-08-29T09:18:31.594+09:00  INFO 81600 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T09:18:31.599+09:00  INFO 81600 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T09:18:31.605+09:00  INFO 81600 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:18:31.607+09:00  INFO 81600 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T09:18:31.614+09:00  INFO 81600 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-08-29T09:21:56.951+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Starting MySpringbootLabApplication using Java 17.0.2 with PID 83016 (/Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab/target/classes started by rose in /Applications/SK-Shieldus-Rookies_Task/Springboot_Practice/MySpringbootLab)
+2025-08-29T09:21:56.954+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : The following 1 profile is active: "prod"
+2025-08-29T09:21:56.985+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29T09:21:56.986+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29T09:21:57.628+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T09:21:57.664+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2025-08-29T09:21:57.993+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-29T09:21:58.002+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-29T09:21:58.003+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-29T09:21:58.028+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-29T09:21:58.028+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1042 ms
+2025-08-29T09:21:58.168+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-29T09:21:58.201+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-29T09:21:58.223+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-29T09:21:58.367+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-29T09:21:58.384+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-29T09:21:58.438+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@63f29021
+2025-08-29T09:21:58.439+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-29T09:21:58.459+09:00  WARN 83016 --- [MySpringbootLab] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-29T09:21:58.472+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-29T09:21:58.933+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-29T09:21:58.969+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:21:59.117+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-29T09:21:59.474+09:00  WARN 83016 --- [MySpringbootLab] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-29T09:21:59.611+09:00  WARN 83016 --- [MySpringbootLab] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-08-29T09:21:59.715+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://localhost:3307/lab_db?user=lab&password=***'
+2025-08-29T09:21:59.731+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29T09:21:59.734+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-29T09:21:59.778+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-29T09:21:59.791+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] c.r.m.MySpringbootLabApplication         : Started MySpringbootLabApplication in 3.197 seconds (process running for 3.997)
+2025-08-29T09:21:59.795+09:00  INFO 83016 --- [MySpringbootLab] [restartedMain] c.r.m.r.MyPropRunner                     : port = 48
+2025-08-29T09:23:20.706+09:00  INFO 83016 --- [MySpringbootLab] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-29T09:23:20.707+09:00  INFO 83016 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-29T09:23:20.713+09:00  INFO 83016 --- [MySpringbootLab] [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2025-08-29T09:23:28.913+09:00  WARN 83016 --- [MySpringbootLab] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' is not supported]
+2025-08-29T09:35:15.318+09:00  INFO 83016 --- [MySpringbootLab] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T09:35:15.326+09:00  INFO 83016 --- [MySpringbootLab] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T09:35:15.334+09:00  INFO 83016 --- [MySpringbootLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T09:35:15.339+09:00  INFO 83016 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T09:35:15.349+09:00  INFO 83016 --- [MySpringbootLab] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
