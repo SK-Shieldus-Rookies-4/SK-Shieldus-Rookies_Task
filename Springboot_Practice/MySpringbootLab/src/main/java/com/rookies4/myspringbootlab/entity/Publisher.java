@@ -25,19 +25,26 @@ public class Publisher {
     @Column(unique = true, nullable = false)
     private String name;
 
+    @Column(length = 200)
+    private String address;
+
     @Column(unique = true, nullable = false)
     private LocalDate establishedDate;
 
-    @Column(unique = true, nullable = false)
+    @OneToMany(mappedBy = "publisher", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Book> books;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "publisher", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    public void addbook(Book book) {
 
+    public void addbook(Book book) {
+        books.add(book);
+        book.setPublisher(this);
     }
 
     public void removeBook(Book book) {
+        books.remove(book);
+        book.setPublisher(null);
 
     }
 }

@@ -34,7 +34,7 @@ public class DefaultExceptionAdvice {
      */
     @ExceptionHandler(BusinessException.class)
     protected ProblemDetail handleException(BusinessException e) {
-        ProblemDetail problemDetail = ProblemDetail.forStatus(e.getHttpStatus());
+        ProblemDetail problemDetail = ProblemDetail.forStatus(e.getStatus());
         problemDetail.setTitle("Not Found");
         problemDetail.setDetail(e.getMessage());
         problemDetail.setProperty("errorCategory", "Generic");

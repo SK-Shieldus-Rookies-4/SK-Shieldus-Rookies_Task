@@ -20,8 +20,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity<ErrorResponse> handleBusinessException(BusinessException ex) {
         log.error("BusinessException: {}", ex.getMessage());
-        ErrorResponse errorResponse = new ErrorResponse(ex.getHttpStatus().value(), ex.getMessage());
-        return new ResponseEntity<>(errorResponse, ex.getHttpStatus());
+        ErrorResponse errorResponse = new ErrorResponse(ex.getStatus().value(), ex.getMessage());
+        return new ResponseEntity<>(errorResponse, ex.getStatus());
     }
 
     /** DTO 유효성 검증 실패 */
