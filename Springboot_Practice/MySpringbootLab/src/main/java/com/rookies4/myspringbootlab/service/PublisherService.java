@@ -1,6 +1,7 @@
 package com.rookies4.myspringbootlab.service;
 
 import com.rookies4.myspringbootlab.entity.Publisher;
+import com.rookies4.myspringbootlab.controller.dto.BookDTO;
 import com.rookies4.myspringbootlab.controller.dto.PublisherDTO;
 import com.rookies4.myspringbootlab.exception.BusinessException;
 import com.rookies4.myspringbootlab.exception.ErrorCode;
@@ -58,6 +59,22 @@ public class PublisherService {
                         "Publisher", "name", name
                 ));
         return PublisherDTO.Response.fromEntity(publisher);
+    }
+
+    /**
+     * 출판사별 도서 목록 조회
+     */
+    @Transactional(readOnly = true)
+    public List<BookDTO.Response> getBooksByPublisher(Long publisherId) {
+        Publisher publisher = publisherRepository.findById(publisherId)
+                .orElseThrow(() -> new BusinessException(
+                        ErrorCode.RESOURCE_NOT_FOUND,
+                        "Publisher", "id", publisherId
+                ));
+
+        return publisher.getBooks().stream()
+                .map(BookDTO.Response::fromEntity)
+                .collect(Collectors.toList());
     }
 
     /**

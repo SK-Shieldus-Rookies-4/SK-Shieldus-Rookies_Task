@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -31,9 +32,9 @@ public class Publisher {
     @Column(unique = true, nullable = false)
     private LocalDate establishedDate;
 
-    @OneToMany(mappedBy = "publisher", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonIgnore
-    private List<Book> books;
+    @OneToMany(mappedBy = "publisher", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private List<Book> books = new ArrayList<>();
 
     @JsonIgnore
 

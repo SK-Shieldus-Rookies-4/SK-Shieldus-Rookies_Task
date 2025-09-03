@@ -49,10 +49,12 @@ public class PublisherDTO {
                     .name(publisher.getName())
                     .establishedDate(publisher.getEstablishedDate())
                     .address(publisher.getAddress())
-                    .bookCount((long) publisher.getBooks().size())
-                    .books(publisher.getBooks().stream()
+                    .bookCount(publisher.getBooks() != null ? (long) publisher.getBooks().size() : 0L)
+                    .books(publisher.getBooks() != null
+                            ? publisher.getBooks().stream()
                             .map(BookDTO.SimpleResponse::fromEntity)
-                            .collect(Collectors.toList()))
+                            .collect(Collectors.toList())
+                            : List.of())
                     .build();
         }
     }

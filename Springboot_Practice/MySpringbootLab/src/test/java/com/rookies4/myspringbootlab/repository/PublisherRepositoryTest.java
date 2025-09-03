@@ -1,7 +1,6 @@
-import com.rookies4.myspringbootlab.entity.Book;
-import com.rookies4.myspringbootlab.entity.BookDetail;
+package com.rookies4.myspringbootlab.repository;
+
 import com.rookies4.myspringbootlab.entity.Publisher;
-import com.rookies4.myspringbootlab.repository.BookRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,146 +8,79 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
-public class BookRepositoryTest {
+public class PublisherRepositoryTest {
 
     @Autowired
     private TestEntityManager entityManager;
 
     @Autowired
-    private BookRepository bookRepository;
+    private PublisherRepository publisherRepository;
 
     private Publisher publisher;
-    private Book book;
-    private BookDetail bookDetail;
 
     @BeforeEach
     void setUp() {
-        // Create publisher
         publisher = Publisher.builder()
                 .name("Penguin Random House")
                 .establishedDate(LocalDate.of(2013, 7, 1))
                 .address("1745 Broadway, New York, NY")
                 .build();
         entityManager.persistAndFlush(publisher);
-
-        // Create book
-        book = Book.builder()
-                .title("Clean Code")
-                .author("Robert C. Martin")
-                .isbn("978-0132350884")
-                .price(45000)
-                .publishDate(LocalDate.of(2008, 8, 1))
-                .publisher(publisher)
-                .build();
-        entityManager.persistAndFlush(book);
-
-        // Create book detail
-        bookDetail = BookDetail.builder()
-                .description("A handbook of agile software craftsmanship")
-                .language("English")
-                .pageCount(464)
-                .publisher("Prentice Hall")
-                .edition("1st Edition")
-                .book(book)
-                .build();
-        entityManager.persistAndFlush(bookDetail);
-
-        book.setBookDetail(bookDetail);
-        entityManager.persistAndFlush(book);
     }
 
     @Test
-    void findByIsbn_ShouldReturnBook() {
+    void findByName_ShouldReturnPublisher() {
         // When
-        Optional<Book> found = bookRepository.findByIsbn("978-0132350884");
+        Optional<Publisher> found = publisherRepository.findByName("Penguin Random House");
 
         // Then
         assertThat(found).isPresent();
-        assertThat(found.get().getTitle()).isEqualTo("Clean Code");
-        assertThat(found.get().getAuthor()).isEqualTo("Robert C. Martin");
+        assertThat(found.get().getName()).isEqualTo("Penguin Random House");
+        assertThat(found.get().getEstablishedDate()).isEqualTo(LocalDate.of(2013, 7, 1));
+        assertThat(found.get().getAddress()).isEqualTo("1745 Broadway, New York, NY");
     }
 
     @Test
-    void findByIsbn_ShouldReturnEmpty_WhenNotFound() {
+    void findByName_ShouldReturnEmpty_WhenNotFound() {
         // When
-        Optional<Book> found = bookRepository.findByIsbn("000-0000000000");
+        Optional<Publisher> found = publisherRepository.findByName("Non-Existent Publisher");
 
         // Then
         assertThat(found).isEmpty();
     }
 
     @Test
-    void findByIdWithAllDetails_ShouldReturnBookWithAllDetails() {
+    void existsByName_ShouldReturnTrue() {
         // When
-        Optional<Book> found = bookRepository.findByIdWithAllDetails(book.getId());
-
-        // Then
-        assertThat(found).isPresent();
-        assertThat(found.get().getBookDetail()).isNotNull();
-        assertThat(found.get().getPublisher()).isNotNull();
-        assertThat(found.get().getPublisher().getName()).isEqualTo("Penguin Random House");
-    }
-
-    @Test
-    void findByPublisherId_ShouldReturnBooks() {
-        // When
-        List<Book> found = bookRepository.findByPublisherId(publisher.getId());
-
-        // Then
-        assertThat(found).hasSize(1);
-        assertThat(found.get(0).getTitle()).isEqualTo("Clean Code");
-    }
-
-    @Test
-    void countByPublisherId_ShouldReturnCorrectCount() {
-        // When
-        Long count = bookRepository.countByPublisherId(publisher.getId());
-
-        // Then
-        assertThat(count).isEqualTo(1);
-    }
-
-    @Test
-    void existsByIsbn_ShouldReturnTrue() {
-        // When
-        boolean exists = bookRepository.existsByIsbn("978-0132350884");
+        boolean exists = publisherRepository.existsByName("Penguin Random House");
 
         // Then
         assertThat(exists).isTrue();
     }
 
     @Test
-    void existsByIsbn_ShouldReturnFalse() {
+    void existsByName_ShouldReturnFalse() {
         // When
-        boolean exists = bookRepository.existsByIsbn("000-0000000000");
+        boolean exists = publisherRepository.existsByName("Non-Existent Publisher");
 
         // Then
         assertThat(exists).isFalse();
     }
 
     @Test
-    void findByAuthorContainingIgnoreCase_ShouldReturnBooks() {
+    void findByIdWithBooks_ShouldReturnPublisher() {
         // When
-        List<Book> found = bookRepository.findByAuthorContainingIgnoreCase("martin");
+        Optional<Publisher> found = publisherRepository.findByIdWithBooks(publisher.getId());
 
         // Then
-        assertThat(found).hasSize(1);
-        assertThat(found.get(0).getAuthor()).contains("Martin");
-    }
-
-    @Test
-    void findByTitleContainingIgnoreCase_ShouldReturnBooks() {
-        // When
-        List<Book> found = bookRepository.findByTitleContainingIgnoreCase("clean");
-
-        // Then
-        assertThat(found).hasSize(1);
-        assertThat(found.get(0).getTitle()).contains("Clean");
+        assertThat(found).isPresent();
+        assertThat(found.get().getName()).isEqualTo("Penguin Random House");
+        // books 컬렉션이 초기화되었는지 확인
+        assertThat(found.get().getBooks()).isNotNull();
     }
 }

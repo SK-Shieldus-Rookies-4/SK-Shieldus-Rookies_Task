@@ -3,8 +3,6 @@ package com.rookies4.myspringbootlab.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
-
 
 @Entity
 @Table(name = "book_details")
